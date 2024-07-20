@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 /* VARIABLES */
 :root {
     /* color */
@@ -20,7 +26,7 @@
     --BORDER-RADIUS: 3px;
     --BORDER: none;
     /* margin & paddings */ 
-    --CONTAINER-PADDING: 3em 1.5em; 
+    --CONTAINER-PADDING: 4rem 3rem; 
 }
 
 /* GENERAL STYLES */
@@ -32,6 +38,12 @@ body {
 }
 .container {
     padding: var(--CONTAINER-PADDING);
+    width: 500px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 30px;
+    margin: auto;
 }
 h1 {
     font-family: var(--KARLA);
@@ -44,16 +56,28 @@ h1 span {
 p {
     color: var(--LIGHTER-COLOR);
     font-size: var(--PARA);
+    margin-top: 0.5em;
+}
+.psd-container {
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 15px;
 }
 #psd-button {
     font-family: inherit;
     display: inline-block;
     background-color: var(--ALT-BGCOLOR);
     color: var(--COLOR);
+    width: 190px;
 }
 div.hr-line {
     height: 1px;
+    width: auto;
     background-color: var(--LIGHTER-BGCOLOR);
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
 }
 input {
     background-color: var(--LIGHTER-BGCOLOR);
