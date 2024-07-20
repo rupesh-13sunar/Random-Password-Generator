@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* VARIABLES */
+:root {
+    /* color */
+    --BGCOLOR: #1F2937;
+    --LIGHTER-BGCOLOR: #273549;
+    --ALT-BGCOLOR: #10B981;
+    --ALT-COLOR: #4ADF86;
+    --COLOR: white;
+    --LIGHTER-COLOR: #D5D4D8;
+    /* fonts & texts*/
+    --TITLE: min(40px, 3rem);
+    --PARA: min(20px, 1rem);
+    --ELEMENTS: min(16px, 0.8rem);
+    --KARLA: "Karla", sans-serif;
+    --INTER: "Inter", sans-serif;
+    /* borders */
+    --BORDER-RADIUS: 3px;
+    --BORDER: none;
+    /* margin & paddings */ 
+    --CONTAINER-PADDING: 3em 1.5em; 
+}
+
+/* GENERAL STYLES */
+body {
+    background-color: var(--BGCOLOR);
+    font-family: var(--INTER);
+    font-size: var(--ELEMENTS);
+    color: var(--COLOR);
+}
+.container {
+    padding: var(--CONTAINER-PADDING);
+}
+h1 {
+    font-family: var(--KARLA);
+    font-size: var(--TITLE);
+    font-weight: 800;
+}
+h1 span {
+    color: var(--ALT-COLOR);
+}
+p {
+    color: var(--LIGHTER-COLOR);
+    font-size: var(--PARA);
+}
+#psd-button {
+    font-family: inherit;
+    display: inline-block;
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--COLOR);
+}
+div.hr-line {
+    height: 1px;
+    background-color: var(--LIGHTER-BGCOLOR);
+}
+input {
+    background-color: var(--LIGHTER-BGCOLOR);
+    color: var(--ALT-COLOR);
+}
+.no-border {
+    border: var(--BORDER);
+    border-radius: var(--BORDER-RADIUS);
+    padding: 0.5rem 1rem;
+}
+
