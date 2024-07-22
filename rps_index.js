@@ -20,10 +20,12 @@ function setPsdLength() { // calling function changed to this when button presse
        alert ("Password either too long either to short");
     }
 };
+
 //random password generates on button click 
 function generatePassword() {
     let firstPsd = ""; // needed for overwriting previous generation  on input box
     let secondPsd = ""; // " " " "
+    
     for (let i=0; i<psdLength; i++) {   // adding loop to first password box
         rIndex = Math.floor(Math.random()*91);
         firstPsd += characters[rIndex];
@@ -34,18 +36,13 @@ function generatePassword() {
         secondPsd += characters[rIndex];
         secondPsdBox.value =secondPsd;
     };
+    
     psdBtn.textContent = "Generate Another"; // changing button value for user experience purpose
 };
-// const inputText = document.querySelector("input");
-// inputText.addEventListener("click", copyOnClick);
-// function copyOnClick() {
-//     let copyTextFromFirst =  document.getElementById("first-psd");
-//     copyTextFromFirst.select();
-//     navigator.clipboard.writeText(copyTextFromFirst.value);
-
-//     // let copyTextFromSecond =  document.getElementById("second-psd");
-//     // copyTextFromSecond.select();
-//     // navigator.clipboard.writeText(copyTextFromSecond.value);
-
-//     // alert("Copied to Clipboard!");
-// }
+let copyTextFromFirst =  document.getElementById("first-psd");
+ copyTextFromFirst.addEventListener("click", copyOnClick);
+ function copyOnClick() {
+     copyTextFromFirst.select();
+     navigator.clipboard.writeText(copyTextFromFirst.value);
+     //alert("Copied to Clipboard!");
+ };
