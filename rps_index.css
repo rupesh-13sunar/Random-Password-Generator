@@ -14,6 +14,7 @@
     --LIGHTER-BGCOLOR: #273549;
     --ALT-BGCOLOR: #10B981;
     --ALT-COLOR: #4ADF86;
+    --ALT-COMP-COLOR: #FF90BD;
     --COLOR: white;
     --LIGHTER-COLOR: #D5D4D8;
     /* fonts & texts*/
@@ -38,7 +39,7 @@ body {
 }
 .container {
     padding: var(--CONTAINER-PADDING);
-    width: 500px;
+    width: 550px; 
     height: 400px;
     display: grid;
     grid-template-rows: auto;
@@ -58,32 +59,48 @@ p {
     font-size: var(--PARA);
     margin-top: 0.5em;
 }
-.psd-container {
+.psd-container { /* contains => psd button, psd length inputk, psd box where generates and similar */
     display: grid;
     grid-template-rows: auto;
     row-gap: 15px;
 }
-#psd-button {
+#psd-button { /* generate password button */
     font-family: inherit;
     display: inline-block;
     background-color: var(--ALT-BGCOLOR);
     color: var(--COLOR);
     width: 190px;
+    cursor: pointer;
 }
-div.hr-line {
+#psd-button:hover {
+    background-color: #4ADF86;
+}
+#psd-button:active {
+    background-color: var(--ALT-COMP-COLOR);
+    color: var(--LIGHTER-BGCOLOR);
+}
+div.hr-line { /* a horizontal line */
     height: 1px;
     width: auto;
     background-color: var(--LIGHTER-BGCOLOR);
 }
-.input-container {
+.input-container { /* container for two input boxes for generated password */
     display: flex;
     justify-content: space-between;
 }
 input {
-    background-color: var(--LIGHTER-BGCOLOR);
-    color: var(--ALT-COLOR);
+    background-color: var(--LIGHTER-COLOR);
 }
-.no-border {
+input[type="text"] { /*selector by attribute*/
+    background-color: var(--LIGHTER-BGCOLOR);
+    color: var(--ALT-COMP-COLOR);
+    font-size: small;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+    cursor: text;
+}
+.no-border { /*generall style with .no-border classname*/
     border: var(--BORDER);
     border-radius: var(--BORDER-RADIUS);
     padding: 0.5rem 1rem;

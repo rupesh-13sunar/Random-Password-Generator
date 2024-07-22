@@ -9,11 +9,13 @@
                 <p>Never use an insecure password again.</p>
             </div>
             <div class="psd-container">
-                <button id="psd-button" class="no-border">Generate passwords</button>
-                <div class="hr-line"></div>
-                <div class="input-container">
-                    <input type="text" class="no-border" name="first-psd" id="first-psd">
-                    <input type="text" class="no-border" name="second-psd" id="second-psd">
+                <button id="psd-button" class="no-border" onclick="generatePassword()">Generate passwords</button>
+                <label for="psd-length">Do you want to set password length?</label>
+                <input id="psd-length" class="no-border" placeholder="8 to 15 recommeneded (Default is 10)">
+                <div class="hr-line"></div> <!-- just a horizontal line -->
+                <div class="input-container"> <!--this where generated password shown-->
+                    <input type="text" class="no-border" name="first-psd" id="first-psd" >
+                    <input type="text" class="no-border" name="second-psd" id="second-psd" >
                 </div>
             </div>
         </div>
