@@ -9,11 +9,13 @@ let secondPsdBox = document.getElementById("second-psd");
 let psdBtn = document.getElementById("psd-button"); // for button changing behaviour
 
 //fucntion to for users input for password length and some validating rules
-function setPsdLength() {
+function setPsdLength() { // calling function changed to this when button pressed
     if (getPsdLength.value > 4 && getPsdLength.value < 17 ) {
         psdLength = getPsdLength.value;
+        generatePassword(); //as to validate the [else] that the generating password cannot be proceed.
     } else if (getPsdLength.value == "") {
         psdLength = 10;
+        generatePassword();
     } else {
        alert ("Password either too long either to short");
     }
@@ -22,7 +24,6 @@ function setPsdLength() {
 function generatePassword() {
     let firstPsd = ""; // needed for overwriting previous generation  on input box
     let secondPsd = ""; // " " " "
-    setPsdLength();
     for (let i=0; i<psdLength; i++) {   // adding loop to first password box
         rIndex = Math.floor(Math.random()*91);
         firstPsd += characters[rIndex];
