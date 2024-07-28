@@ -72,7 +72,7 @@ p {
     width: 190px;
     cursor: pointer;
 }
-#psd-button:hover {
+#psd-button:hover, .psd-type:hover {
     background-color: #4ADF86;
 }
 #psd-button:active {
@@ -105,4 +105,17 @@ input[type="text"] { /*selector by attribute*/
     border-radius: var(--BORDER-RADIUS);
     padding: 0.5rem 1rem;
 }
+/* password type settings of style */
+.psd-type {
+    padding: 0.3 1rem;
+    color: var(--COLOR);
+    background-color: var(--ALT-BGCOLOR);
+    background-image: linear-gradient(308deg, var(--BGCOLOR), transparent);
+    margin-inline-end: 1rem;
+    display: block;
+}
 
+.psd-type:active {
+    background-color: var(--ALT-BGCOLOR);
+    background-image: linear-gradient(8deg, var(--BGCOLOR), transparent);
+}
