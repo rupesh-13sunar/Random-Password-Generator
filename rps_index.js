@@ -63,3 +63,10 @@ let copyTextFromFirst =  document.getElementById("first-psd");
      navigator.clipboard.writeText(copyTextFromFirst.value);
      //alert("Copied to Clipboard!");
  };
+
+ //now adding changing theme on click
+//   function changeTheme(theme) {
+//      const getWholeHTML = document.documentElement;
+//      getWholeHTML.classList.toggle(theme);
+//   };
+const changeTheme = theme => document.documentElement.classList.toggle(theme);

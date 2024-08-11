@@ -16,6 +16,8 @@
     --ALT-COLOR: #4ADF86;
     --ALT-COMP-COLOR: #FF90BD;
     --COLOR: white;
+    --ALT-LIGHTER-COLOR: #ebeaee;
+    --COLOR-DARK : black;
     --LIGHTER-COLOR: #D5D4D8;
     /* fonts & texts*/
     --TITLE: min(40px, 3rem);
@@ -28,6 +30,18 @@
     --BORDER: none;
     /* margin & paddings */ 
     --CONTAINER-PADDING: 4rem 3rem; 
+}
+:root.lighter {
+    /* color */
+    --BGCOLOR: #ebeaee;
+    --LIGHTER-BGCOLOR: #1F2937;
+    --ALT-BGCOLOR: #10B981;
+    --ALT-COLOR: #4ADF86;
+    --ALT-COMP-COLOR: #FF90BD;
+    --COLOR: black;
+    --ALT-LIGHTER-COLOR: #ebeaee;
+    --COLOR-DARK : black;
+    --LIGHTER-COLOR: #FF90BD;
 }
 
 /* GENERAL STYLES */
@@ -119,3 +133,48 @@ input[type="text"] { /*selector by attribute*/
     background-color: var(--ALT-BGCOLOR);
     background-image: linear-gradient(8deg, var(--BGCOLOR), transparent);
 }
+/* --------------- */
+/* slider buttono styling */
+input[type="checkbox"] {
+    visibility: hidden;
+}
+label.switch {
+    margin: 1rem 0 0 1rem;
+    position: relative;
+    display: inline-block;
+}
+label span.slider {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--LIGHTER-COLOR);
+}
+label span.slider::after {
+    position: absolute;
+    content: "";
+    background-color: var(--BGCOLOR);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 5px;
+    transition: ease 0.3s;
+}
+input[type="checkbox"]:checked + .slider::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+input[type="checkbox"]:checked + .slider {
+    background-color: var(--ALT-BGCOLOR);
+}
+span.slider:active::after {
+    width: 20px;
+}
+/*-----------*/
+/* lighter theme initiates */
+/* .lighter {
+  background-color: var(--ALT-LIGHTER-COLOR);
+  color: var(--COLOR-DARK);
+} */
